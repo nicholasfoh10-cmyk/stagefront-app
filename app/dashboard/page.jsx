@@ -54,9 +54,8 @@ async function fetchShows() {
         user_id: session.user.email
       })
     });
-    if (res.ok) {
-      alert('Added to watchlist!');
-    }
+    const data = await res.json();
+    alert(JSON.stringify(data));
   }
   if (status === 'loading') {
     return (
