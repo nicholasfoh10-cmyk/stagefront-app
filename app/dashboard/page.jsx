@@ -16,10 +16,10 @@ export default function Dashboard() {
     }
   }, [status, session]);
 
-  async function fetchShows() {
+async function fetchShows() {
     setLoading(true);
     try {
-      const res = await fetch('/api/shows');
+      const res = await fetch(`/api/shows?token=${session.accessToken}`);
       const data = await res.json();
       setShows(data.shows || []);
     } catch (e) {
