@@ -24,10 +24,11 @@ export async function GET(request) {
   return Response.json({ watchlist: data });
 }
 
-export async function DELETE(request) {
-  const { searchParams } = new URL(request.url);
-  const id = searchParams.get('id');
-  const { error } = await supabase.from('watchlist').delete().eq('id', id);
-  if (error) return Response.json({ error: error.message }, { status: 500 });
+export async function POST(request) {
+  const body = await request.json();
+  const key = process.env.SUPABASE_SERVICE_KEY;
+  console.log('Using key:', key ? key.substring(0, 20) : 'MISSING');
+  const { error } = await supabase.from('watchlist').insert([body]);
+  if (error) return Response.json({ error: error.message, key_present: !!key }, { status: 500 });
   return Response.json({ success: true });
 }
