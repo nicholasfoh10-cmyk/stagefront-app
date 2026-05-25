@@ -72,11 +72,11 @@ async function fetchShows() {
   return (
     <main className="min-h-screen bg-white">
       <nav className="flex items-center justify-between px-8 py-4 border-b border-gray-100">
-        <div className="text-lg font-medium">
-          stage<span className="text-blue-500">front</span>
-        </div>
-        <div className="text-sm text-gray-500">{session?.user?.name}</div>
-      </nav>
+  <div className="text-lg font-medium">
+    stage<span className="text-blue-500">front</span>
+  </div>
+  <div className="text-sm text-gray-500">{session?.user?.name}</div>
+</nav>
 
       <div className="max-w-3xl mx-auto px-8 py-12">
         <h1 className="text-2xl font-medium text-gray-900 mb-2">Your shows</h1>
