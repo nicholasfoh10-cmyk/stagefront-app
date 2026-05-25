@@ -13,8 +13,7 @@ export default function Watchlist() {
   }, [status]);
 
   async function fetchWatchlist() {
-    const res = await fetch(`/api/watchlist?user_id=${session.user.email}`);
-    const data = await res.json();
+const res = await fetch(`/api/watchlist?user_id=${session.user.name}`);    const data = await res.json();
     setWatchlist(data.watchlist || []);
     setLoading(false);
   }
