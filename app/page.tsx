@@ -7,7 +7,7 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-6">
           <a href="#" className="text-sm text-gray-500">how it works</a>
-          <a href="/api/auth/signin" className="text-sm bg-blue-500 text-white px-4 py-2 rounded-lg">get started</a>
+          <a href="/api/auth/signin?callbackUrl=/dashboard" className="text-sm bg-blue-500 text-white px-4 py-2 rounded-lg">get started</a>
         </div>
       </nav>
 
@@ -21,7 +21,7 @@ export default function Home() {
         <p className="text-lg text-gray-500 mb-10">
           Stagefront syncs with your Spotify, alerts you the moment face-value tickets drop, and tracks resale prices so you always know when to buy.
         </p>
-        <a href="/api/auth/signin" className="inline-block bg-blue-500 text-white text-sm font-medium px-8 py-3 rounded-lg">
+        <a href="/api/auth/signin?callbackUrl=/dashboard" className="inline-block bg-blue-500 text-white text-sm font-medium px-8 py-3 rounded-lg">
           connect your Spotify
         </a>
         <p className="text-xs text-gray-400 mt-4">no credit card required</p>
