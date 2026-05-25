@@ -51,7 +51,7 @@ async function fetchShows() {
         event_date: show.date,
         status: show.status,
         ticket_url: show.url,
-        user_id: session.user.email
+        user_id: session.user.name
       })
     });
     const data = await res.json();
