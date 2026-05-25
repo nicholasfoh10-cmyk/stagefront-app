@@ -75,7 +75,11 @@ async function fetchShows() {
   <div className="text-lg font-medium">
     stage<span className="text-blue-500">front</span>
   </div>
-  <div className="text-sm text-gray-500">{session?.user?.name}</div>
+  <div className="flex items-center gap-6">
+    <a href="/dashboard" className="text-sm font-medium text-gray-900">discover</a>
+    <a href="/watchlist" className="text-sm text-gray-500">watchlist</a>
+    <div className="text-sm text-gray-400">{session?.user?.name}</div>
+  </div>
 </nav>
 
       <div className="max-w-3xl mx-auto px-8 py-12">
